@@ -23,6 +23,11 @@ spec:
           volumeMounts:
             - mountPath: /usr/share/nginx/html
               name: configmap-vol
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "200m"
       nodeSelector:
         kubernetes.io/os: linux
       volumes:
